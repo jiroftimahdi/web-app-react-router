@@ -5,11 +5,11 @@ class History{
   }
   goBack(){
     this.index--;
-    return history[this.index];
+    return this.history[this.index];
   }
   goForward(){
     this.index++;
-    return history[this.index];
+    return this.history[this.index];
   }
   removeAllAhead(){
     this.history = this.history.filter((item,index)=>{
@@ -34,6 +34,14 @@ class History{
   popPage(){
     this.history.splice(this.index,1);
     this.index--;
+    if(this.index>=0){
+      return this.history[this.index];
+    }
+    else
+      return null;
+
+  }
+  getCurrentPage(){
     return this.history[this.index];
   }
 }
