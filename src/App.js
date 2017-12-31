@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-
+import Router from './Router';
+import PageOne from './samplePages/PageOne';
 class App extends Component {
   render() {
     return (
-      <div>
-       <p>WEB APP REACT ROUTER</p>
-      </div>
+      <Router entryPage={PageOne}/>
     );
   }
 }
